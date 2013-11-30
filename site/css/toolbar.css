@@ -1,0 +1,150 @@
+/**                               ______________________________________________
+*                          o O   |                                              |
+*                 (((((  o      <    Generated with Cook Self Service  V2.6.2   |
+*                ( o o )         |______________________________________________|
+* --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
+* @version		
+* @package		Geo Events
+* @subpackage	
+* @copyright	2013 GeoParadise.org
+* @author		Jeffrey Ray - geoparadise.org - geolab@geoparadise.org
+* @license		All rights reserved.
+*
+*             .oooO  Oooo.
+*             (   )  (   )
+* -------------\ (----) /----------------------------------------------------------- +
+*               \_)  (_/
+*/
+
+/**
+* Component icons 48px (Cpanel)
+**/
+.ico-48-geoevents, .icon-48-geoevents {
+	background-image:url('../images/icon-48-geoevents.png');
+}
+.ico-48-geoevents_events, .icon-48-geoevents_events {
+	background-image:url('../images/icon-48-geoevents_events.png');
+}
+.ico-48-geoevents_vendorapplications, .icon-48-geoevents_vendorapplications {
+	background-image:url('../images/icon-48-geoevents_vendorapplications.png');
+}
+.ico-48-geoevents_volunteerapplications, .icon-48-geoevents_volunteerapplications {
+	background-image:url('../images/icon-48-geoevents_volunteerapplications.png');
+}
+.ico-48-geoevents_cpanel, .icon-48-geoevents_cpanel {
+	background-image:url('../images/icon-48-geoevents_cpanel.png');
+}
+
+/**
+* Component icons 16px (Sub Menu)
+**/
+.ico-16-geoevents, .icon-16-geoevents {
+	background-image:url('../images/icon-16-geoevents.png');
+}
+.ico-16-geoevents_events, .icon-16-geoevents_events {
+	background-image:url('../images/icon-16-geoevents_events.png');
+}
+.ico-16-geoevents_vendorapplications, .icon-16-geoevents_vendorapplications {
+	background-image:url('../images/icon-16-geoevents_vendorapplications.png');
+}
+.ico-16-geoevents_volunteerapplications, .icon-16-geoevents_volunteerapplications {
+	background-image:url('../images/icon-16-geoevents_volunteerapplications.png');
+}
+.ico-16-geoevents_cpanel, .icon-16-geoevents_cpanel {
+	background-image:url('../images/icon-16-geoevents_cpanel.png');
+}
+
+/**
+* Icons 16px
+**/
+span.ico-16-task-new, span.icon-16-task-new, span.new {
+	background-image:url('../images/icon-16-task-new.png');
+}
+span.ico-16-task-edit, span.icon-16-task-edit, span.edit {
+	background-image:url('../images/icon-16-task-edit.png');
+}
+span.ico-16-task-publish, span.icon-16-task-publish, span.publish {
+	background-image:url('../images/icon-16-task-publish.png');
+}
+span.ico-16-task-unpublish, span.icon-16-task-unpublish, span.unpublish {
+	background-image:url('../images/icon-16-task-unpublish.png');
+}
+span.ico-16-task-archive, span.icon-16-task-archive, span.archive {
+	background-image:url('../images/icon-16-task-archive.png');
+}
+span.ico-16-task-trash, span.icon-16-task-trash, span.trash {
+	background-image:url('../images/icon-16-task-trash.png');
+}
+span.ico-16-task-delete, span.icon-16-task-delete, span.delete {
+	background-image:url('../images/icon-16-task-delete.png');
+}
+span.ico-16-task-config, span.icon-16-task-config, span.config {
+	background-image:url('../images/icon-16-task-config.png');
+}
+span.ico-16-task-apply, span.icon-16-task-apply, span.apply {
+	background-image:url('../images/icon-16-task-apply.png');
+}
+span.ico-16-task-save, span.icon-16-task-save, span.save {
+	background-image:url('../images/icon-16-task-save.png');
+}
+span.ico-16-task-save2new, span.icon-16-task-save2new, span.save2new {
+	background-image:url('../images/icon-16-task-save2new.png');
+}
+span.ico-16-task-save2copy, span.icon-16-task-save2copy, span.save2copy {
+	background-image:url('../images/icon-16-task-save2copy.png');
+}
+span.ico-16-task-cancel, span.icon-16-task-cancel, span.cancel {
+	background-image:url('../images/icon-16-task-cancel.png');
+}
+span.ico-16-task-toggle, span.icon-16-task-toggle, span.toggle {
+	background-image:url('../images/icon-16-task-toggle.png');
+}
+
+/**
+* Icons colors
+**/
+.icon-edit:before {
+	color:#2f96b4;
+}
+.icon-featured:before, .icon-star:before, .icon-star-empty:before, .icon-default:before {
+	color:#f89406;
+}
+.icon-pending:before {
+	color:#f89406;
+}
+.icon-publish:before, .icon-save:before, .icon-ok:before {
+	color:#51a351;
+}
+.icon-unpublish:before, .btn-toolbar .icon-cancel:before {
+	color:#bd362f;
+}
+.icon-not-ok:before, .icon-eye-close:before {
+	color:#bd362f;
+}
+.icon-save-new:before {
+	color:#51a351;
+}
+.icon-ban-circle:before, .icon-minus-sign:before {
+	color:#bd362f;
+}
+.icon-save-copy:before, .btn-toolbar .icon-copy:before {
+	color:#51a351;
+}
+
+/**
+* System
+**/
+span.spinner {
+	background-image:url('../images/icon-16-spinner.gif');
+}
+[class^="icon-32"], [class*=" icon-32"] {
+	background-position:0px 0px; !important;
+}
+
+/**
+* Fixes
+**/
+.jgrid span {
+	padding:0px;
+}
+

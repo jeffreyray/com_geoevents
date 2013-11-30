@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="edit.form" addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+		<field name="title"
+				alias="title"
+				label="GEOEVENTS_FIELD_TITLE"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[length255]]"
+				validate="length255"
+				type="cktext"/>
+
+		<field name="alias"
+				alias="alias"
+				label="GEOEVENTS_FIELD_ALIAS"
+				filter="STRING"
+				class="validate[custom[length255]]"
+				validate="length255"
+				type="cktext"/>
+
+		<field name="start_time"
+				alias="start_time"
+				label="GEOEVENTS_FIELD_START_TIME"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[time_5389]]"
+				validate="time"
+				ruleInstance="time_5389"
+				type="ckcalendar"
+				format="Y-m-d H:i"/>
+
+		<field name="end_time"
+				alias="end_time"
+				label="GEOEVENTS_FIELD_END_TIME"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[time_5361]]"
+				validate="time"
+				ruleInstance="time_5361"
+				type="ckcalendar"
+				format="Y-m-d H:i"/>
+
+		<field name="location"
+				alias="location"
+				label="GEOEVENTS_FIELD_LOCATION"
+				filter="STRING"
+				class="validate[custom[length255]]"
+				validate="length255"
+				type="cktext"/>
+
+		<field name="ordering"
+				alias="ordering"
+				label="GEOEVENTS_FIELD_ORDERING"
+				filter="INT"
+				class="validate[custom[numeric]]"
+				validate="numeric"
+				access="core.edit.state"
+				type="ckordering"
+				labelKey="title"/>
+
+		<field name="published"
+				alias="published"
+				label="GEOEVENTS_FIELD_STATUS"
+				filter="INT"
+				class="validate[custom[numeric]]"
+				validate="numeric"
+				access="core.edit.state"
+				type="ckstate"/>
+
+		<field name="access"
+				alias="_access_title"
+				label="GEOEVENTS_FIELD_ACCESS"
+				filter="INT"
+				access="core.edit"
+				listKey="id"
+				labelKey="title"
+				type="ckaccesslevel"
+				nullLabel="GEOEVENTS_FILTER_NULL_SELECT_ACCESS"/>
+
+		<field name="description"
+				alias="description"
+				label="GEOEVENTS_FIELD_DESCRIPTION"
+				filter="RAW"
+				type="ckeditor"/>
+
+		<field name="created_by"
+				alias="created_by"
+				label="GEOEVENTS_FIELD_CREATED_BY"
+				filter="INT"
+				access="core.edit"
+				type="cktext"/>
+
+		<field name="creation_date"
+				alias="creation_date"
+				label="GEOEVENTS_FIELD_CREATION_DATE"
+				filter="STRING"
+				class="validate[custom[time_2099]]"
+				validate="time"
+				ruleInstance="time_2099"
+				type="ckcalendar"
+				format="Y-m-d"/>
+
+		<field name="modified_by"
+				alias="modified_by"
+				label="GEOEVENTS_FIELD_MODIFIED_BY"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="modification_date"
+				alias="modification_date"
+				label="GEOEVENTS_FIELD_MODIFICATION_DATE"
+				filter="STRING"
+				class="validate[custom[time_7078]]"
+				validate="time"
+				ruleInstance="time_7078"
+				type="ckcalendar"
+				format="Y-m-d"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="GEOEVENTS_LAYOUT_VENDOR_APPLICATION">
+	<message>
+		<![CDATA[GEOEVENTS_LAYOUT_SHOW_VENDOR_APPLICATION_LAYOUT]]>
+	</message></layout>
+
+	<fields name="request">
+
+		<fieldset name="request" addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+			<field name="cid"
+					type="modal_vendorapplication"
+					label="GEOEVENTS_JSEARCH_SELECT_VENDOR_APPLICATION"
+					required="false"
+					default=""
+					description="GEOEVENTS_JSEARCH_SELECT_VENDOR_APPLICATION"/>
+			
+			<field name="filter_event"
+					type="modal_event"
+					label="GEOEVENTS_JSEARCH_SELECT_EVENT"
+					required="false"
+					default=""
+					description="GEOEVENTS_JSEARCH_SELECT_EVENT"/>
+		</fieldset>
+	</fields>
+</metadata>

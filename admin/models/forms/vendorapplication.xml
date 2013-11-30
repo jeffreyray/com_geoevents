@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="edit.form" addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+		<field name="event"
+				alias="_event_title"
+				label="GEOEVENTS_FIELD_EVENT_TITLE"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				nullLabel="GEOEVENTS_JSEARCH_SELECT_EVENT_TITLE"/>
+
+		<field name="vendor_name"
+				alias="vendor_name"
+				label="GEOEVENTS_FIELD_VENDOR_NAME"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[length255]]"
+				validate="length255"
+				type="cktext"/>
+
+		<field name="user"
+				alias="_user_name"
+				label="GEOEVENTS_FIELD_USER_NAME"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GEOEVENTS_JSEARCH_SELECT_USER_NAME"/>
+
+		<field name="indigenous"
+				alias="indigenous"
+				label="GEOEVENTS_FIELD_INDIGENOUS"
+				filter="BOOL"
+				required="true"
+				class="validate[required]"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="store_type"
+				alias="store_type"
+				label="GEOEVENTS_FIELD_STORE_TYPE"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				nullLabel="GEOEVENTS_JSEARCH_SELECT_STORE_TYPE"/>
+
+		<field name="frontage"
+				alias="frontage"
+				label="GEOEVENTS_FIELD_FRONTAGE"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				nullLabel="GEOEVENTS_JSEARCH_SELECT_FRONTAGE"/>
+
+		<field name="electricity"
+				alias="electricity"
+				label="GEOEVENTS_FIELD_ELECTRICITY"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="number_of_workers"
+				alias="number_of_workers"
+				label="GEOEVENTS_FIELD_NUMBER_OF_WORKERS"
+				filter="INT"
+				required="true"
+				class="validate[required,custom[numeric]]"
+				validate="numeric"
+				type="cktext"/>
+
+		<field name="products"
+				alias="products"
+				label="GEOEVENTS_FIELD_PRODUCTS"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="approved"
+				alias="approved"
+				label="GEOEVENTS_FIELD_APPROVED"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="creation_date"
+				alias="creation_date"
+				label="GEOEVENTS_FIELD_CREATION_DATE"
+				filter="STRING"
+				class="validate[custom[time_9708]]"
+				validate="time"
+				ruleInstance="time_9708"
+				type="ckcalendar"
+				format="Y-m-d"/>
+
+		<field name="created_by"
+				alias="_created_by_name"
+				label="GEOEVENTS_FIELD_CREATED_BY_NAME"
+				filter="INT"
+				access="core.edit"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="GEOEVENTS_JSEARCH_SELECT_CREATED_BY_NAME"/>
+
+		<field name="fee"
+				alias="fee"
+				label="GEOEVENTS_FIELD_FEE"
+				filter="FLOAT"
+				class="validate[custom[decimal6to2]]"
+				validate="decimal6to2"
+				type="cktext"/>
+
+		<field name="agree_to_conditions"
+				alias="agree_to_conditions"
+				label="GEOEVENTS_FIELD_AGREE_TO_CONDITIONS"
+				filter="BOOL"
+				required="true"
+				class="validate[required]"
+				listKey="value"
+				type="ckradio"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_event"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_EVENT"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_EVENT_TITLE"
+				ui="chosen"/>
+
+		<field name="filter_store_type"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_STORE_TYPE"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_STORE_TYPE"
+				ui="chosen"/>
+
+		<field name="filter_frontage"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_FRONTAGE"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_FRONTAGE"
+				ui="chosen"/>
+
+		<field name="filter_indigenous"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_INDIGENOUS"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_INDIGENOUS"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="filter_approved"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_APPROVED"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_APPROVED"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="filter_event"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_EVENT"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_EVENT_TITLE"
+				ui="chosen"/>
+
+		<field name="filter_store_type"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_STORE_TYPE"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_STORE_TYPE"
+				ui="chosen"/>
+
+		<field name="filter_frontage"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_FRONTAGE"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_FRONTAGE"
+				ui="chosen"/>
+
+		<field name="filter_indigenous"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_INDIGENOUS"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_INDIGENOUS"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="filter_approved"
+				listKey="value"
+				type="ckcombo"
+				submit="true"
+				nullLabel="GEOEVENTS_FILTER_NULL_APPROVED"
+				class="span-2 element-filter"
+				label="GEOEVENTS_JSEARCH_APPROVED"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">GEOEVENTS_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">GEOEVENTS_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="component" version="1.6" method="upgrade">
+	<name><![CDATA[geoevents]]></name>
+	<author><![CDATA[Jeffrey Ray]]></author>
+	<creationDate><![CDATA[29 Nov 2013]]></creationDate>
+	<copyright><![CDATA[2013 GeoParadise.org]]></copyright>
+	<authorEmail><![CDATA[geolab@geoparadise.org]]></authorEmail>
+	<authorUrl><![CDATA[geoparadise.org]]></authorUrl>
+	<version><![CDATA[]]></version>
+	<license><![CDATA[All rights reserved.]]></license>
+	<description><![CDATA[For managing GeoParadise events.]]></description>
+
+	<files folder="site">
+		<folder>fork</folder>
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>geoevents.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+	</files>
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_geoevents.ini</language>
+	</languages>
+
+	<administration>
+
+		<files folder="admin">
+			<folder>fork</folder>
+			<folder>classes</folder>
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>js</folder>
+			<folder>legacy</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>geoevents.php</filename>
+			<filename>index.html</filename>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_geoevents.ini</language>
+			<language tag="en-GB">language/en-GB.com_geoevents.sys.ini</language>
+		</languages>
+		<menu img="components/com_geoevents/images/icon-16-geoevents.png">GEOEVENTS_MENU_GEO_EVENTS</menu>
+
+		<submenu>
+			<menu img="components/com_geoevents/images/icon-16-geoevents_events.png" link="option=com_geoevents&amp;view=events&amp;layout=default">GEOEVENTS_MENU_EVENTS</menu>
+			<menu img="components/com_geoevents/images/icon-16-geoevents_vendorapplications.png" link="option=com_geoevents&amp;view=vendorapplications">GEOEVENTS_MENU_VENDOR_APPLICATIONS</menu>
+		</submenu>
+	</administration>
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+</extension>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<config>
+
+	<fieldset name="configuration"
+			label="GEOEVENTS_CONFIG_COMPONENT_CONFIGURATION"
+			description="GEOEVENTS_CONFIG_COMPONENT_CONFIGURATION_1"
+			addfieldpath="/administrator/components/com_geoevents/models/fields"/>
+	
+	<fieldset name="vender"
+		  label="GEOEVENTS_CONFIG_VENDOR_CONFIGURATION"
+		  addfieldpath="/administrator/components/com_geoevents/models/fields">
+	
+                <field
+                        name="vendor_terms_and_conditions"
+                        type="textarea"
+                        label="GEOEVENTS_CONFIG_FIELD_VENDOR_TERMS_AND_CONDITIONS"
+			cols="100"
+                        rows="10"
+                />
+	</fieldset>
+
+	<fieldset name="permissions"
+			label="GEOEVENTS_CONFIG_PERMISSIONS"
+			description="GEOEVENTS_CONFIG_DEFAULT_PERMISSIONS_USED_FOR_ALL_CONTENT_IN_THIS_COMPONENT"
+			addfieldpath="/administrator/components/com_geoevents/models/fields">
+
+		<field name="rules"
+				label="GEOEVENTS_FIELD_PERMISSIONS"
+				filter="rules"
+				type="rules"
+				validate="rules"
+				section="component"
+				component="com_geoevents"/>
+	</fieldset>
+</config>
